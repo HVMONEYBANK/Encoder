@@ -114,7 +114,7 @@ async def encode(filepath, msg):
         text= "Encoding In Progress", 
         reply_markup=InlineKeyboardMarkup(
         [
-          [InlineKeyboardButton("STATS 🏢", callback_data=f"stats{og}" )],
+          [InlineKeyboardButton("STATS 💘🎥", callback_data=f"stats{og}" )],
        ])
      )
     except Exception as e:
@@ -122,7 +122,7 @@ async def encode(filepath, msg):
         text= "Encoding In Progress",
         reply_markup=InlineKeyboardMarkup(
         [
-           [InlineKeyboardButton("❌ Cancel ❌", callback_data="cancel")],
+           [InlineKeyboardButton("🤬 Cancel 🤬", callback_data="cancel")],
         ])
       )
      min = await app.send_message(
@@ -189,7 +189,7 @@ async def sample_gen(app, message):
      upload = await app.send_video(
         chat_id=message.chat.id,
         video=output_file,
-        caption="Sample Generated From 00:30 Of 30 SECONDS",
+        caption="Sample Generated The Given Video File :) 😇",
         supports_streaming=True,
         duration=duration,
         width=1280,
