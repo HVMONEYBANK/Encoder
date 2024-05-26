@@ -156,7 +156,7 @@ async def mediainfo(app, message):
           d_start
         )
       )
-   await msg.edit("**Getting Mediainfo**")
+   await msg.edit("**Getting Mediainfo Yenti Ipudu Asal Neku Endhuku Iyani **")
    mediainfo = await info(filepath, app)
    await msg.edit(f"[Mediainfo]({mediainfo})")
   else:
