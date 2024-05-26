@@ -10,9 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
          
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
-      - uses: actions/cache@v2
+      - uses: actions/cache@v4
         with:
           path: ~/.cache/pip
           key: ${{ hashFiles('setup.py') }}-${{ hashFiles('requirements.txt') }}
@@ -25,6 +25,12 @@ jobs:
       
       - name: install ffmpeg
         run: sudo apt install -y ffmpeg
+
+      - name: python-lxml
+        run: pip3 install lxml
+
+      - name: lxml_html_clean
+        run: pip install lxml_html_clean
 
       - name: erro404
         timeout-minutes: 350
