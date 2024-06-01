@@ -22,7 +22,7 @@ jobs:
 
       - name: update
         run: sudo apt-get -y update
-              
+      
       - name: install ffmpeg
         run: sudo apt install -y ffmpeg
 
@@ -51,4 +51,4 @@ jobs:
         run: |
           python3 main.py
         env:
-          GITHUB_TOKEN: ${{ secrets.PAT }} 
+          GITHUB_TOKEN: ${{ secrets.PAT }}
