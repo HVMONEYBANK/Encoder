@@ -22,11 +22,7 @@ jobs:
 
       - name: update
         run: sudo apt-get -y update
-
-      - name: Attest Build Provenance
-        uses: actions/attest-build-provenance@v1.1.2
-            
-      
+              
       - name: install ffmpeg
         run: sudo apt install -y ffmpeg
 
