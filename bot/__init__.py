@@ -32,7 +32,7 @@ LOGS = logging.getLogger(__name__)
 THUMB = "https://te.legra.ph/file/2ebf402cdef8c27ab4648.jpg"
 os.system(f"wget {THUMB} -O thumb.jpg")
 ffmpeg = []
-ffmpeg.append("-map 0 -c:v libx265 -crf 24 -c:s copy  -s 1280x720 -preset veryfast -c:a libopus -ab 60k -vbr 2 -ac 2 -level 2.1")
+ffmpeg.append("-i 'https://telegra.ph/file/ab2c66f1192454112150d.png' -i input_video.mp4 -filter_complex '[1:v][0]overlay=W-w-10:H-h-10[out]' -map '[out]' -c:v libx265 -crf 30 -c:s copy -s 1280x720 -preset veryfast -metadata title='Visit For More Cartoons [t.me/HV_CARTOONS_TELUGU_2]' -metadata:s:v title='Visit Website[HV CARTOONS] t.me/AniXpo] - 720p - HEVC - 8bit' -metadata:s:a title='[Visit t.me/HV_CARTOONS_TELUGU_2] - Opus - 60 kbps' -metadata:s:s title='[AniXpo Substations Alpha]' -c:a libopus -ab 60k -vbr 2 -ac 2 -level 2.1")
 try:
  api_id = int(os.environ.get("API_ID"))
  api_hash = os.environ.get("API_HASH")
